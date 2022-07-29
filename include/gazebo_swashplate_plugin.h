@@ -106,7 +106,6 @@ class GazeboSwashplatePlugin : public MotorModel, public ModelPlugin {
   virtual void UpdateForcesAndMoments();
   /// \brief A function to check the motor_Failure_Number_ and stimulate motor fail
   /// \details Doing joint_->SetVelocity(0,0) for the flagged motor to fail
-  virtual void UpdateMotorFail();
   virtual void Load(physics::ModelPtr _model, sdf::ElementPtr _sdf);
   virtual void OnUpdate(const common::UpdateInfo & /*_info*/);
 

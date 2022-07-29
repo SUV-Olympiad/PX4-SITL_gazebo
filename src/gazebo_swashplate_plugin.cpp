@@ -177,7 +177,6 @@ void GazeboSwashplatePlugin::OnUpdate(const common::UpdateInfo& _info) {
   sampling_time_ = _info.simTime.Double() - prev_sim_time_;
   prev_sim_time_ = _info.simTime.Double();
   UpdateForcesAndMoments();
-  UpdateMotorFail();
   Publish();
 }
 
@@ -245,6 +244,7 @@ void GazeboSwashplatePlugin::UpdateForcesAndMoments() {
   ignition::math::Vector3d drag_torque_parent_frame = pose_difference.Rot().RotateVector(drag_torque);
   parent_links.at(0)->AddRelativeTorque(drag_torque_parent_frame);
 
+  ///TODO: Map control input to roll moment
   ignition::math::Vector3d rolling_moment;
   // - \omega * \mu_1 * V_A^{\perp}
   rolling_moment = -std::abs(real_motor_velocity) * turning_direction_ * rolling_moment_coefficient_ * velocity_perpendicular_to_rotor_axis;
@@ -277,25 +277,6 @@ void GazeboSwashplatePlugin::UpdateForcesAndMoments() {
 #else
   joint_->SetVelocity(0, turning_direction_ * ref_motor_rot_vel / rotor_velocity_slowdown_sim_);
 #endif /* if 0 */
-}
-
-void GazeboSwashplatePlugin::UpdateMotorFail() {
-  if (motor_number_ == motor_Failure_Number_ - 1){
-    // motor_constant_ = 0.0;
-    joint_->SetVelocity(0,0);
-    if (screen_msg_flag){
-      std::cout << "Motor number [" << motor_Failure_Number_ <<"] failed!  [Motor thrust = 0]" << std::endl;
-      tmp_motor_num = motor_Failure_Number_;
-
-      screen_msg_flag = 0;
-    }
-  }else if (motor_Failure_Number_ == 0 && motor_number_ ==  tmp_motor_num - 1){
-     if (!screen_msg_flag){
-       //motor_constant_ = kDefaultMotorConstant;
-       std::cout << "Motor number [" << tmp_motor_num <<"] running! [Motor thrust = (default)]" << std::endl;
-       screen_msg_flag = 1;
-     }
-  }
 }
 
 void GazeboSwashplatePlugin::WindVelocityCallback(WindPtr& msg) {
