@@ -255,13 +255,6 @@
         <pose>0 0 10 0 -0 0</pose>
       </light>
     </state>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose>-636.131 -795.293 -96.5947 6.7e-05 1.5698 -1.57194</pose>
-        <view_controller>ortho</view_controller>
-        <projection_type>orthographic</projection_type>
-      </camera>
-    </gui>
     <model name='mountain'>
       <static>1</static>
       <link name='link'>
