@@ -25,6 +25,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('filename', help="file that the sdf file should be generated from")
     parser.add_argument('env_dir')
+    parser.add_argument('--instance_number', default=0, help="Instance number port for PX4 SITL")
     parser.add_argument('--mavlink_tcp_port', default=4560, help="TCP port for PX4 SITL")
     parser.add_argument('--mavlink_udp_port', default=14560, help="Mavlink UDP port for mavlink access")
     parser.add_argument('--serial_enabled', default=0, help="Enable Serial device for HITL")
@@ -36,7 +37,7 @@ if __name__ == "__main__":
     parser.add_argument('--mavlink_id', default=1, help="Mavlink system ID")
     parser.add_argument('--cam_component_id', default=100, help="Mavlink camera component ID")
     parser.add_argument('--gst_udp_port', default=5600, help="Gstreamer UDP port for SITL")
-    parser.add_argument('--video_uri', default="udp://127.0.0.1:5600", help="Mavlink camera URI for SITL")
+    parser.add_argument('--video_uri', default=5600, help="Mavlink camera URI for SITL")
     parser.add_argument('--mavlink_cam_udp_port', default=14530, help="Mavlink camera UDP port for SITL")
     parser.add_argument('--generate_ros_models', default=False, dest='generate_ros_models', type=str2bool,
                     help="required if generating the agent for usage with ROS nodes, by default false")
@@ -58,6 +59,7 @@ if __name__ == "__main__":
         rospack = None
 
     d = {'np': np, 'rospack': rospack, \
+         'instance_number': args.instance_number, \
          'mavlink_tcp_port': args.mavlink_tcp_port, \
          'mavlink_udp_port': args.mavlink_udp_port, \
          'serial_enabled': args.serial_enabled, \
