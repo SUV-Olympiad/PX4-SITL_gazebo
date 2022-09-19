@@ -218,6 +218,10 @@ void GpsPlugin::Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf)
   gravity_W_ = world_->Gravity();
 
   gps_pub_ = node_handle_->Advertise<sensor_msgs::msgs::SITLGps>("~/" + rootModelName + "/link/" + gps_topic_, 10);
+
+  // Create the subscriber for the sensors
+  gpsdenied_sub_ = node_handle_->Subscribe("~/gps_denied_pos", &GpsPlugin::GpsDeniedCallback, this);
+
 }
 
 void GpsPlugin::OnWorldUpdate(const common::UpdateInfo& /*_info*/)
@@ -248,6 +252,15 @@ void GpsPlugin::OnWorldUpdate(const common::UpdateInfo& /*_info*/)
   ignition::math::Vector3d& pos_W_I = T_W_I.Pos();
   ignition::math::Quaterniond& att_W_I = T_W_I.Rot();
 
+  double gps_denied_dist = pos_W_I.Distance(gps_denied_pos_);
+  if ( gps_denied_dist > 0.0 && gps_denied_dist < 2.0) {
+    //printf("dist: %f\n", gps_denied_dist);
+    gps_denied_noise_density_ = 100.0;
+  }
+  else {
+    gps_denied_noise_density_ = 1.0;
+  }
+
   // Use the models' world position for GPS velocity.
 #if GAZEBO_MAJOR_VERSION >= 9
   ignition::math::Vector3d velocity_current_W = model_->WorldLinearVel();
@@ -260,15 +273,15 @@ void GpsPlugin::OnWorldUpdate(const common::UpdateInfo& /*_info*/)
 
   // update noise parameters if gps_noise_ is set
   if (gps_noise_) {
-    noise_gps_pos_.X() = gps_xy_noise_density_ * sqrt(dt) * randn_(rand_);
-    noise_gps_pos_.Y() = gps_xy_noise_density_ * sqrt(dt) * randn_(rand_);
-    noise_gps_pos_.Z() = gps_z_noise_density_ * sqrt(dt) * randn_(rand_);
-    noise_gps_vel_.X() = gps_vxy_noise_density_ * sqrt(dt) * randn_(rand_);
-    noise_gps_vel_.Y() = gps_vxy_noise_density_ * sqrt(dt) * randn_(rand_);
-    noise_gps_vel_.Z() = gps_vz_noise_density_ * sqrt(dt) * randn_(rand_);
-    random_walk_gps_.X() = gps_xy_random_walk_ * sqrt(dt) * randn_(rand_);
-    random_walk_gps_.Y() = gps_xy_random_walk_ * sqrt(dt) * randn_(rand_);
-    random_walk_gps_.Z() = gps_z_random_walk_ * sqrt(dt) * randn_(rand_);
+    noise_gps_pos_.X() = gps_denied_noise_density_* gps_xy_noise_density_ * sqrt(dt) * randn_(rand_);
+    noise_gps_pos_.Y() = gps_denied_noise_density_* gps_xy_noise_density_ * sqrt(dt) * randn_(rand_);
+    noise_gps_pos_.Z() = gps_denied_noise_density_* gps_z_noise_density_ * sqrt(dt) * randn_(rand_);
+    noise_gps_vel_.X() = gps_denied_noise_density_* gps_vxy_noise_density_ * sqrt(dt) * randn_(rand_);
+    noise_gps_vel_.Y() = gps_denied_noise_density_* gps_vxy_noise_density_ * sqrt(dt) * randn_(rand_);
+    noise_gps_vel_.Z() = gps_denied_noise_density_* gps_vz_noise_density_ * sqrt(dt) * randn_(rand_);
+    random_walk_gps_.X() = gps_denied_noise_density_* gps_xy_random_walk_ * sqrt(dt) * randn_(rand_);
+    random_walk_gps_.Y() = gps_denied_noise_density_* gps_xy_random_walk_ * sqrt(dt) * randn_(rand_);
+    random_walk_gps_.Z() = gps_denied_noise_density_* gps_z_random_walk_ * sqrt(dt) * randn_(rand_);
   }
   else {
     noise_gps_pos_.X() = 0.0;
@@ -369,4 +382,11 @@ void GpsPlugin::OnSensorUpdate()
     gps_pub_->Publish(gps_msg);
   }
 }
+
+void GpsPlugin::GpsDeniedCallback(GpsDeniedPtr& msg)
+{
+  gps_denied_pos_ = ignition::math::Vector3d(msg->x(), msg->y(), msg->z());
+  // printf("gps_denied_pos: %f, %f, %f\n", gps_denied_pos_.X(), gps_denied_pos_.Y(), gps_denied_pos_.Z());
+}
+
 } // namespace gazebo

@@ -47,6 +47,7 @@
 #include <gazebo/sensors/SensorTypes.hh>
 #include <gazebo/sensors/GpsSensor.hh>
 
+#include <GpsDenied.pb.h>
 #include <SITLGps.pb.h>
 
 namespace gazebo
@@ -59,6 +60,9 @@ static constexpr double kDefaultGpsZNoiseDensity = 4.0e-4;      // (m) / sqrt(hz
 static constexpr double kDefaultGpsVXYNoiseDensity = 0.2;       // (m/s) / sqrt(hz)
 static constexpr double kDefaultGpsVZNoiseDensity = 0.4;        // (m/s) / sqrt(hz)
 
+// typedef const boost::shared_ptr<const sensor_msgs::msgs::GpsDenied> GpsDeniedPtr;
+typedef const boost::shared_ptr<const msgs::Vector3d> GpsDeniedPtr;
+
 class GAZEBO_VISIBLE GpsPlugin : public SensorPlugin
 {
 public:
@@ -69,6 +73,9 @@ protected:
   virtual void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
   virtual void OnSensorUpdate();
   virtual void OnWorldUpdate(const common::UpdateInfo& /*_info*/);
+
+private:
+  void GpsDeniedCallback(GpsDeniedPtr& msg);
 
 private:
   std::string namespace_;
@@ -88,6 +95,7 @@ private:
 
   transport::NodePtr node_handle_;
   transport::PublisherPtr gps_pub_;
+  transport::SubscriberPtr gpsdenied_sub_;
 
   std::string gps_topic_;
   double update_rate_;
@@ -120,6 +128,7 @@ private:
   ignition::math::Vector3d random_walk_gps_;
   ignition::math::Vector3d gravity_W_;
   ignition::math::Vector3d velocity_prev_W_;
+  ignition::math::Vector3d gps_denied_pos_;
 
   // gps noise parameters
   double std_xy_;    // meters
@@ -133,6 +142,7 @@ private:
   double gps_z_noise_density_;
   double gps_vxy_noise_density_;
   double gps_vz_noise_density_;
+  double gps_denied_noise_density_;
 };     // class GAZEBO_VISIBLE GpsPlugin
 }      // namespace gazebo
 #endif // _GAZEBO_GPS_PLUGIN_HH_
