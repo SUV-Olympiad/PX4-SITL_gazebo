@@ -329,6 +329,7 @@ set(sensor_msgs
   msgs/OpticalFlow.proto
   msgs/MagneticField.proto
   msgs/Pressure.proto
+  msgs/GpsDenied.proto
   )
 
 PROTOBUF_GENERATE_CPP(MAV_PROTO_SRCS MAV_PROTO_HDRS ${mav_msgs})
@@ -353,6 +354,7 @@ link_libraries(physics_msgs)
 add_library(gazebo_airspeed_plugin SHARED src/gazebo_airspeed_plugin.cpp)
 add_library(gazebo_camera_manager_plugin SHARED src/gazebo_camera_manager_plugin.cpp)
 add_library(gazebo_gps_plugin SHARED src/gazebo_gps_plugin.cpp)
+add_library(gazebo_gpsdeniedenv_plugin SHARED src/gazebo_gpsdeniedenv_plugin.cpp)
 add_library(gazebo_groundtruth_plugin SHARED src/gazebo_groundtruth_plugin.cpp)
 add_library(gazebo_irlock_plugin SHARED src/gazebo_irlock_plugin.cpp)
 add_library(gazebo_lidar_plugin SHARED src/gazebo_lidar_plugin.cpp)
@@ -380,6 +382,7 @@ set(plugins
   gazebo_airspeed_plugin
   gazebo_camera_manager_plugin
   gazebo_gps_plugin
+  gazebo_gpsdeniedenv_plugin
   gazebo_groundtruth_plugin
   gazebo_irlock_plugin
   gazebo_lidar_plugin
