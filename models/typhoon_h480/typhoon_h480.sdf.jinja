@@ -1491,13 +1491,6 @@
         	  <izz>2.407e-6</izz>
         	  </inertia>
         	</inertial>
-        	<visual name='visual'>
-        	  <geometry>
-        	    <box>
-        	      <size>0.01 0.01 0.01</size>
-        	    </box>
-        	  </geometry>
-        	</visual>
         	<sensor name='camera' type='camera'>
         	  <camera name='__default__'>
         	    <horizontal_fov>1.047</horizontal_fov>
@@ -1555,6 +1548,7 @@
         	</sensor>
         	<self_collide>0</self_collide>
         	<kinematic>0</kinematic>
+        	<gravity>1</gravity>
         	</link>
         	</model>
         	<joint name="follow_cam_joint" type="fixed">
