@@ -44,9 +44,9 @@ void GpsDeniedEnv::OnUpdate()
         double t = common::Time::GetWallTime().Double();
 
         if ( t - _prev_t > 1.0 ) {
-            double rand_x = RandomFloat(-1.0, 1.0) * 0.0000001;
-            double rand_y = RandomFloat(-1.0, 1.0) * 0.0000001;
-            double rand_z = RandomFloat(-1.0, 1.0) * 0.0000001;
+            double rand_x = RandomFloat(-1.0, 1.0) * 1;
+            double rand_y = RandomFloat(-1.0, 1.0) * 1;
+            double rand_z = RandomFloat(-1.0, 1.0) * 1;
 
             randWalkPose += ignition::math::Vector3d(rand_x, rand_y, rand_z);
             // printf("%f : %f, %f, %f\n", t, randWalkPose.X(), randWalkPose.Y(), randWalkPose.Z() );
