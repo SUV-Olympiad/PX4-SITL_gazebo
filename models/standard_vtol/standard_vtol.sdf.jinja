@@ -1063,7 +1063,7 @@
 		    * Camera info is published to: /custom_ns/custom_camera/custom_info
 	       -->
 	       <ros>
-		 <namespace>vehicle{{ instance_number }}</namespace>
+		 <namespace>vehicle{{ mavlink_id }}</namespace>
 		 <remapping>image_raw:=custom_img</remapping>
 		 <remapping>camera_info:=custom_info</remapping>
 	       </ros>
@@ -1147,7 +1147,7 @@
         		    * Camera info is published to: /custom_ns/custom_camera/custom_info
         	       -->
         	       <ros>
-        		 <namespace>vehicle{{ instance_number }}</namespace>
+        		 <namespace>vehicle{{ mavlink_id }}</namespace>
         		 <remapping>image_raw:=custom_img</remapping>
         		 <remapping>camera_info:=custom_info</remapping>
         	       </ros>
