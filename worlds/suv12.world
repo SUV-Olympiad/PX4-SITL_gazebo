@@ -275,50 +275,50 @@
         </link>
       </model>
       <model name='camera_point_a'>
-        <pose>-246.176 145.099 300 0 1.5707 0</pose>
+        <pose>-246.176 145.099 247 0 1.5707 2.365</pose>
         <scale>1 1 1</scale>
         <link name='camera_a_link'>
-          <pose>-246.176 145.099 300 0 1.5707 0</pose>
+          <pose>-246.176 145.099 247 0 1.5707 2.365</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='camera_point_b'>
-        <pose>-138.36 -456.489 280 0 1.5707 0</pose>
+        <pose>-138.36 -456.489 218 0 1.5707 0</pose>
         <scale>1 1 1</scale>
-        <link name='camera_a_link'>
-          <pose>-138.36 -456.489 280 0 1.5707 0</pose>
+        <link name='camera_b_link'>
+          <pose>-138.36 -456.489 218 0 1.5707 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='camera_point_c'>
-        <pose>1048.37 213.988 300 0 1.5707 0</pose>
+        <pose>1048.37 213.988 250 0 1.5707 1.25767</pose>
         <scale>1 1 1</scale>
-        <link name='camera_a_link'>
-          <pose>1048.37 213.988 300 0 1.5707 0</pose>
+        <link name='camera_c_link'>
+          <pose>1048.37 213.988 250 0 1.5707 1.25767</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='camera_point_d'>
-        <pose>800.897 -290.725 280 0 1.5707 0</pose>
+        <pose>800.897 -290.725 217 0 1.5707 0.588657</pose>
         <scale>1 1 1</scale>
-        <link name='camera_a_link'>
-          <pose>800.897 -290.725 280 0 1.5707 0</pose>
+        <link name='camera_d_link'>
+          <pose>800.897 -290.725 217 0 1.5707 0.588657</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='camera_point_e'>
-        <pose>-590.974 -68.1333 300 0 1.5707 0</pose>
+        <pose>-590.974 -68.1333 245 0 1.5707 0.786216</pose>
         <scale>1 1 1</scale>
-        <link name='camera_a_link'>
-          <pose>-590.974 -68.1333 300 0 1.5707 0</pose>
+        <link name='camera_e_link'>
+          <pose>-590.974 -68.1333 245 0 1.5707 0.786216</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -390,7 +390,7 @@
       <pose>-260.431 88.5075 225 0 -0 0.794343</pose>
     </model>
     <model name='camera_point_a'>
-      <static>1</static>
+      <static>0</static>
       <link name='camera_a_link'>
         <inertial>
           <mass>0.1</mass>
@@ -404,18 +404,17 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <visual name='visual'>
+        <sensor name='camera_point_a' type='camera'>
+          <camera>
+            <horizontal_fov>1.047</horizontal_fov>
+            <image>
+              <width>320</width>        <visual name='visual'>
           <geometry>
             <box>
               <size>0.1 0.1 0.1</size>
             </box>
           </geometry>
         </visual>
-        <sensor name='camera_point_a' type='camera'>
-          <camera>
-            <horizontal_fov>1.047</horizontal_fov>
-            <image>
-              <width>320</width>
               <height>240</height>
             </image>
             <clip>
@@ -425,7 +424,7 @@
           </camera>
           <always_on>1</always_on>
           <update_rate>30</update_rate>
-          <visualize>1</visualize>
+          <visualize>0</visualize>
           <plugin name='cameraplugin' filename='libgazebo_ros_camera.so'>
             <alwaysOn>1</alwaysOn>
             <updateRate>0.0</updateRate>
@@ -449,8 +448,8 @@
       <pose>0 0 0 0 -0 0</pose>
     </model>
     <model name='camera_point_b'>
-      <static>1</static>
-      <link name='camera_a_link'>
+      <static>0</static>
+      <link name='camera_b_link'>
         <inertial>
           <mass>0.1</mass>
           <inertia>
@@ -463,14 +462,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <visual name='visual'>
-          <geometry>
-            <box>
-              <size>0.1 0.1 0.1</size>
-            </box>
-          </geometry>
-        </visual>
-        <sensor name='camera_point_a' type='camera'>
+        <sensor name='camera_point_b' type='camera'>
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
@@ -484,14 +476,14 @@
           </camera>
           <always_on>1</always_on>
           <update_rate>30</update_rate>
-          <visualize>1</visualize>
+          <visualize>0</visualize>
           <plugin name='cameraplugin' filename='libgazebo_ros_camera.so'>
             <alwaysOn>1</alwaysOn>
             <updateRate>0.0</updateRate>
-            <cameraName>camera_point_a</cameraName>
+            <cameraName>camera_point_b</cameraName>
             <imageTopicName>image_raw</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-            <frameName>camera_a_link</frameName>
+            <frameName>camera_b_link</frameName>
             <hackBaseline>0.07</hackBaseline>
             <distortionK1>0.0</distortionK1>
             <distortionK2>0.0</distortionK2>
@@ -508,8 +500,8 @@
       <pose>-233.689 -28.0422 280 0 1.5707 0</pose>
     </model>
     <model name='camera_point_c'>
-      <static>1</static>
-      <link name='camera_a_link'>
+      <static>0</static>
+      <link name='camera_c_link'>
         <inertial>
           <mass>0.1</mass>
           <inertia>
@@ -522,14 +514,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <visual name='visual'>
-          <geometry>
-            <box>
-              <size>0.1 0.1 0.1</size>
-            </box>
-          </geometry>
-        </visual>
-        <sensor name='camera_point_a' type='camera'>
+        <sensor name='camera_point_c' type='camera'>
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
@@ -543,14 +528,14 @@
           </camera>
           <always_on>1</always_on>
           <update_rate>30</update_rate>
-          <visualize>1</visualize>
+          <visualize>0</visualize>
           <plugin name='cameraplugin' filename='libgazebo_ros_camera.so'>
             <alwaysOn>1</alwaysOn>
             <updateRate>0.0</updateRate>
-            <cameraName>camera_point_a</cameraName>
+            <cameraName>camera_point_c</cameraName>
             <imageTopicName>image_raw</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-            <frameName>camera_a_link</frameName>
+            <frameName>camera_c_link</frameName>
             <hackBaseline>0.07</hackBaseline>
             <distortionK1>0.0</distortionK1>
             <distortionK2>0.0</distortionK2>
@@ -567,8 +552,8 @@
       <pose>-231.413 -10.9202 280 0 1.5707 0</pose>
     </model>
     <model name='camera_point_d'>
-      <static>1</static>
-      <link name='camera_a_link'>
+      <static>0</static>
+      <link name='camera_d_link'>
         <inertial>
           <mass>0.1</mass>
           <inertia>
@@ -581,14 +566,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <visual name='visual'>
-          <geometry>
-            <box>
-              <size>0.1 0.1 0.1</size>
-            </box>
-          </geometry>
-        </visual>
-        <sensor name='camera_point_a' type='camera'>
+        <sensor name='camera_point_d' type='camera'>
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
@@ -602,14 +580,14 @@
           </camera>
           <always_on>1</always_on>
           <update_rate>30</update_rate>
-          <visualize>1</visualize>
+          <visualize>0</visualize>
           <plugin name='cameraplugin' filename='libgazebo_ros_camera.so'>
             <alwaysOn>1</alwaysOn>
             <updateRate>0.0</updateRate>
-            <cameraName>camera_point_a</cameraName>
+            <cameraName>camera_point_d</cameraName>
             <imageTopicName>image_raw</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-            <frameName>camera_a_link</frameName>
+            <frameName>camera_d_link</frameName>
             <hackBaseline>0.07</hackBaseline>
             <distortionK1>0.0</distortionK1>
             <distortionK2>0.0</distortionK2>
@@ -626,8 +604,8 @@
       <pose>-240.351 -10.772 280 0 1.5707 0</pose>
     </model>
     <model name='camera_point_e'>
-      <static>1</static>
-      <link name='camera_a_link'>
+      <static>0</static>
+      <link name='camera_e_link'>
         <inertial>
           <mass>0.1</mass>
           <inertia>
@@ -640,14 +618,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <visual name='visual'>
-          <geometry>
-            <box>
-              <size>0.1 0.1 0.1</size>
-            </box>
-          </geometry>
-        </visual>
-        <sensor name='camera_point_a' type='camera'>
+        <sensor name='camera_point_e' type='camera'>
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
@@ -661,14 +632,14 @@
           </camera>
           <always_on>1</always_on>
           <update_rate>30</update_rate>
-          <visualize>1</visualize>
+          <visualize>0</visualize>
           <plugin name='cameraplugin' filename='libgazebo_ros_camera.so'>
             <alwaysOn>1</alwaysOn>
             <updateRate>0.0</updateRate>
-            <cameraName>camera_point_a</cameraName>
+            <cameraName>camera_point_e</cameraName>
             <imageTopicName>image_raw</imageTopicName>
             <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-            <frameName>camera_a_link</frameName>
+            <frameName>camera_e_link</frameName>
             <hackBaseline>0.07</hackBaseline>
             <distortionK1>0.0</distortionK1>
             <distortionK2>0.0</distortionK2>
