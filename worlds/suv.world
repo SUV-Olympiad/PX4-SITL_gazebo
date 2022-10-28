@@ -1,5 +1,4 @@
 <?xml version="1.0" ?>
-<sdf version='1.7'>
   <world name='default'>
     <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
@@ -220,10 +219,10 @@
       <pose>-320.992 -178.021 176.499 0 -0 0.491665</pose>
     </model>
     <state world_name='default'>
-      <sim_time>20991 941000000</sim_time>
-      <real_time>811 695791964</real_time>
-      <wall_time>1666869915 340971703</wall_time>
-      <iterations>202316</iterations>
+      <sim_time>21117 41000000</sim_time>
+      <real_time>125 365455394</real_time>
+      <wall_time>1666925049 247177768</wall_time>
+      <iterations>31275</iterations>
       <model name='Point_A'>
         <pose>-246.176 145.099 217 0 -0 0.794344</pose>
         <scale>0.667891 0.783592 1</scale>
@@ -295,10 +294,10 @@
         </link>
       </model>
       <model name='camera_point_c'>
-        <pose>1038.37 183.988 250 -3.9e-05 0.3707 1.25763</pose>
+        <pose>1033.37 167.988 258 -4e-05 0.3707 1.25763</pose>
         <scale>1 1 1</scale>
         <link name='camera_c_link'>
-          <pose>1038.37 183.988 250 -3.9e-05 0.3707 1.25763</pose>
+          <pose>1033.37 167.988 258 -4e-05 0.3707 1.25763</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -710,7 +709,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>-616.265 -94.9034 247.302 0 0.444 0.664001</pose>
+        <pose>1033.7 162.9 261.377 0 0.596016 1.21147</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
