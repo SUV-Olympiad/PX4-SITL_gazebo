@@ -60,7 +60,7 @@ void GpsDeniedEnv::OnUpdate()
         ignition::math::Vector3d model_pos = _model->WorldPose().Pos();
         pos.set_x(model_pos.X());
         pos.set_y(model_pos.Y());
-        pos.set_z(model_pos.Z());
+        pos.set_z(360);
         _gpsdenied_pos_pub->Publish(pos);
 
         // sensor_msgs::msgs::GpsDenied msg;
