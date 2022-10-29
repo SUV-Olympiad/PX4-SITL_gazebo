@@ -3266,15 +3266,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>320</width>
-              <height>240</height>
-              <visual name='visual'>
-                <geometry>
-                  <box>
-                    <size>0.1 0.1 0.1</size>
-                  </box>
-                </geometry>
-              </visual>
+              <width>1920</width>
+              <height>1080</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3325,8 +3318,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>320</width>
-              <height>240</height>
+              <width>1920</width>
+              <height>1080</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3377,8 +3370,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>320</width>
-              <height>240</height>
+              <width>1920</width>
+              <height>1080</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3429,8 +3422,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>320</width>
-              <height>240</height>
+              <width>1920</width>
+              <height>1080</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3481,8 +3474,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>320</width>
-              <height>240</height>
+              <width>1920</width>
+              <height>1080</height>
             </image>
             <clip>
               <near>0.1</near>
