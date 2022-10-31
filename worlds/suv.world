@@ -1,9 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version='1.7'>
   <world name='default'>
-    <include>
-        <uri>model://gpsdenied_env</uri>
-    </include>
     <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
       <pose>0 0 10 0 -0 0</pose>
@@ -52,7 +49,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>1.53087 1.30794 0.1</size>
+              <size>0.010127 0.003932 0.1</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -73,7 +70,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>1.53087 1.30794 0.1</size>
+              <size>0.010127 0.003932 0.1</size>
             </box>
           </geometry>
           <material>
@@ -96,7 +93,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>8.19413 9.13627 0.1</size>
+              <size>0.703564 2.51666 7.8e-05</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -117,7 +114,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>8.19413 9.13627 0.1</size>
+              <size>0.703564 2.51666 7.8e-05</size>
             </box>
           </geometry>
           <material>
@@ -140,7 +137,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>3.6366 3.63054 0.1</size>
+              <size>0.302583 0.213469 0.1</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -161,7 +158,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>3.6366 3.63054 0.1</size>
+              <size>0.302583 0.213469 0.1</size>
             </box>
           </geometry>
           <material>
@@ -184,7 +181,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>2.07827 2.56678 0.1</size>
+              <size>0.032145 0.054333 0.1</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -205,7 +202,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>2.07827 2.56678 0.1</size>
+              <size>0.032145 0.054333 0.1</size>
             </box>
           </geometry>
           <material>
@@ -223,10 +220,10 @@
       <pose>-320.992 -178.021 176.499 0 -0 0.491665</pose>
     </model>
     <state world_name='default'>
-      <sim_time>21117 41000000</sim_time>
-      <real_time>125 365455394</real_time>
-      <wall_time>1666925049 247177768</wall_time>
-      <iterations>31275</iterations>
+      <sim_time>21505 153000000</sim_time>
+      <real_time>390 347432380</real_time>
+      <wall_time>1667193670 146473373</wall_time>
+      <iterations>97028</iterations>
       <model name='Point_A'>
         <pose>-246.176 145.099 217 0 -0 0.794344</pose>
         <scale>0.667891 0.783592 1</scale>
@@ -278,50 +275,50 @@
         </link>
       </model>
       <model name='camera_point_a'>
-        <pose>-220.176 118.099 259 -0.003112 0.620703 2.36189</pose>
+        <pose>-220.176 118.099 261 -0.003112 0.820702 2.36189</pose>
         <scale>1 1 1</scale>
         <link name='camera_a_link'>
-          <pose>-220.176 118.099 259 -0.003112 0.620703 2.36189</pose>
+          <pose>-220.176 118.099 261 -0.003112 0.820702 2.36189</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='camera_point_b'>
-        <pose>-178.36 -456.489 217 0 0.2707 0</pose>
+        <pose>-178.36 -457.489 224 0 0.5707 0</pose>
         <scale>1 1 1</scale>
         <link name='camera_b_link'>
-          <pose>-178.36 -456.489 217 0 0.2707 0</pose>
+          <pose>-178.36 -457.489 224 0 0.5707 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='camera_point_c'>
-        <pose>1033.37 167.988 258 -4e-05 0.3707 1.25763</pose>
+        <pose>1033.37 167.988 263 -4e-05 0.6207 1.25763</pose>
         <scale>1 1 1</scale>
         <link name='camera_c_link'>
-          <pose>1033.37 167.988 258 -4e-05 0.3707 1.25763</pose>
+          <pose>1033.37 167.988 263 -4e-05 0.6207 1.25763</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='camera_point_d'>
-        <pose>783.897 -300.725 218 0.004174 0.520702 0.592834</pose>
+        <pose>783.897 -300.725 222 0.004174 0.770702 0.592834</pose>
         <scale>1 1 1</scale>
         <link name='camera_d_link'>
-          <pose>783.897 -300.725 218 0.004174 0.520702 0.592834</pose>
+          <pose>783.897 -300.725 222 0.004174 0.770702 0.592834</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='camera_point_e'>
-        <pose>-611.974 -90.1333 245 -0.001702 0.370703 0.784514</pose>
+        <pose>-611.974 -90.1333 250 -0.001702 0.620703 0.784514</pose>
         <scale>1 1 1</scale>
         <link name='camera_e_link'>
-          <pose>-611.974 -90.1333 245 -0.001702 0.370703 0.784514</pose>
+          <pose>-611.974 -90.1333 250 -0.001702 0.620703 0.784514</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -713,7 +710,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>1033.7 162.9 261.377 0 0.596016 1.21147</pose>
+        <pose>-618.688 -96.7507 250.836 0 0.354109 0.706624</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -724,7 +721,7 @@
         <collision name='collision'>
           <geometry>
             <box>
-              <size>44.9145 29.4747 0.1</size>
+              <size>100.687 48.0032 0.1</size>
             </box>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -745,7 +742,7 @@
           <cast_shadows>0</cast_shadows>
           <geometry>
             <box>
-              <size>44.9145 29.4747 0.1</size>
+              <size>100.687 48.0032 0.1</size>
             </box>
           </geometry>
           <material>
@@ -3276,7 +3273,7 @@
           </camera>
           <always_on>1</always_on>
           <update_rate>30</update_rate>
-          <visualize>0</visualize>
+          <visualize>1</visualize>
           <plugin name='cameraplugin' filename='libgazebo_ros_camera.so'>
             <alwaysOn>1</alwaysOn>
             <updateRate>0.0</updateRate>
@@ -3328,7 +3325,7 @@
           </camera>
           <always_on>1</always_on>
           <update_rate>30</update_rate>
-          <visualize>0</visualize>
+          <visualize>1</visualize>
           <plugin name='cameraplugin' filename='libgazebo_ros_camera.so'>
             <alwaysOn>1</alwaysOn>
             <updateRate>0.0</updateRate>
@@ -3380,7 +3377,7 @@
           </camera>
           <always_on>1</always_on>
           <update_rate>30</update_rate>
-          <visualize>0</visualize>
+          <visualize>1</visualize>
           <plugin name='cameraplugin' filename='libgazebo_ros_camera.so'>
             <alwaysOn>1</alwaysOn>
             <updateRate>0.0</updateRate>
@@ -3432,7 +3429,7 @@
           </camera>
           <always_on>1</always_on>
           <update_rate>30</update_rate>
-          <visualize>0</visualize>
+          <visualize>1</visualize>
           <plugin name='cameraplugin' filename='libgazebo_ros_camera.so'>
             <alwaysOn>1</alwaysOn>
             <updateRate>0.0</updateRate>
@@ -3484,7 +3481,7 @@
           </camera>
           <always_on>1</always_on>
           <update_rate>30</update_rate>
-          <visualize>0</visualize>
+          <visualize>1</visualize>
           <plugin name='cameraplugin' filename='libgazebo_ros_camera.so'>
             <alwaysOn>1</alwaysOn>
             <updateRate>0.0</updateRate>
