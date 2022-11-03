@@ -43,50 +43,6 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <model name='Point_B'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>1.53087 1.30794 0.1</size>
-            </box>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>0</cast_shadows>
-          <geometry>
-            <box>
-              <size>1.53087 1.30794 0.1</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://asphalt_plane/materials/scripts</uri>
-              <uri>model://asphalt_plane/materials/textures</uri>
-              <name>vrc/asphalt</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>-24.3943 -604.621 156.394 0 -0 0.683281</pose>
-    </model>
     <model name='Point_C'>
       <static>1</static>
       <link name='link'>
@@ -131,144 +87,16 @@
       </link>
       <pose>1160.06 149.985 150.381 0 -0 0.038555</pose>
     </model>
-    <model name='Point_D'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>3.6366 3.63054 0.1</size>
-            </box>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>0</cast_shadows>
-          <geometry>
-            <box>
-              <size>3.6366 3.63054 0.1</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://asphalt_plane/materials/scripts</uri>
-              <uri>model://asphalt_plane/materials/textures</uri>
-              <name>vrc/asphalt</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>823.778 -241.044 223.654 0 -0 0.475873</pose>
-    </model>
-    <model name='Point_E'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>2.07827 2.56678 0.1</size>
-            </box>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>0</cast_shadows>
-          <geometry>
-            <box>
-              <size>2.07827 2.56678 0.1</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://asphalt_plane/materials/scripts</uri>
-              <uri>model://asphalt_plane/materials/textures</uri>
-              <name>vrc/asphalt</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>-320.992 -178.021 176.499 0 -0 0.491665</pose>
-    </model>
     <state world_name='default'>
-      <sim_time>21662 633000000</sim_time>
-      <real_time>546 730282253</real_time>
-      <wall_time>1667203924 160573552</wall_time>
-      <iterations>136398</iterations>
-      <model name='Point_A'>
-        <pose>-246.176 145.099 217 0 -0 0.794344</pose>
-        <scale>0.667891 0.783592 1</scale>
-        <link name='link'>
-          <pose>-246.176 145.099 217 0 -0 0.794344</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='Point_B'>
-        <pose>-138.36 -456.489 195.381 0 -0 0.003662</pose>
-        <scale>12.295 18.2379 1</scale>
-        <link name='link'>
-          <pose>-138.36 -456.489 195.381 0 -0 0.003662</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
+      <sim_time>22412 257000000</sim_time>
+      <real_time>42 429187461</real_time>
+      <wall_time>1667488032 458530477</wall_time>
+      <iterations>10131</iterations>
       <model name='Point_C'>
         <pose>1048.37 213.988 221.219 0 0 -0.31303</pose>
         <scale>3.41271 1.90534 35.7677</scale>
         <link name='link'>
           <pose>1048.37 213.988 221.219 0 0 -0.31303</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='Point_D'>
-        <pose>800.897 -290.725 200.7 0 -0 0.588657</pose>
-        <scale>3.46678 4.12399 1</scale>
-        <link name='link'>
-          <pose>800.897 -290.725 200.7 0 -0 0.588657</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='Point_E'>
-        <pose>-590.974 -68.1333 225 0 -0 0.786216</pose>
-        <scale>8.04071 6.87324 1</scale>
-        <link name='link'>
-          <pose>-590.974 -68.1333 225 0 -0 0.786216</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -324,7 +152,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='map04'>
+      <model name='map05'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
@@ -704,104 +532,57 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
+      <model name='point_E'>
+        <pose>-590.95 -68.1115 225 0 -0 0.787379</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-590.95 -68.1115 225 0 -0 0.787379</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='point_A'>
+        <pose>-246.176 145.099 217.1 0 -0 0.794713</pose>
+        <scale>1.5 1.3 1</scale>
+        <link name='link'>
+          <pose>-246.176 145.099 217.1 0 -0 0.794713</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='point_B'>
+        <pose>-138.36 -456.489 195 0 -0 0</pose>
+        <scale>1 1.2 1</scale>
+        <link name='link'>
+          <pose>-138.36 -456.489 195 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='point_D'>
+        <pose>800.897 -290.725 200.7 0 -0 0.584247</pose>
+        <scale>0.8 0.8 1</scale>
+        <link name='link'>
+          <pose>800.897 -290.725 200.7 0 -0 0.584247</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
       <light name='sun'>
         <pose>0 0 10 0 -0 0</pose>
       </light>
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>-617.127 -94.6433 251.797 0 0.376 0.672</pose>
+        <pose>-243.464 676.432 743.612 0 0.813786 -1.86025</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
-    <model name='Point_A'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>44.9145 29.4747 0.1</size>
-            </box>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>0</cast_shadows>
-          <geometry>
-            <box>
-              <size>44.9145 29.4747 0.1</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://asphalt_plane/materials/scripts</uri>
-              <uri>model://asphalt_plane/materials/textures</uri>
-              <name>vrc/asphalt</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>-260.431 88.5075 225 0 -0 0.794343</pose>
-    </model>
-    <model name='map04'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://map04/meshes/map04.dae</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://map04/meshes/map04.dae</uri>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://map04/meshes/map04.dae</uri>
-              <uri>model://map04/materials/textures</uri>
-              <name>__default__</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>0.499744 0.060422 0 0 -0 0</pose>
-    </model>
     <model name='pine_tree'>
       <static>1</static>
       <link name='link'>
@@ -3263,8 +3044,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>320</width>
-              <height>240</height>
+              <width>1920</width>
+              <height>1080</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3315,8 +3096,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>320</width>
-              <height>240</height>
+              <width>1920</width>
+              <height>1080</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3367,8 +3148,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>320</width>
-              <height>240</height>
+              <width>1920</width>
+              <height>1080</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3419,8 +3200,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>320</width>
-              <height>240</height>
+              <width>1920</width>
+              <height>1080</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3471,8 +3252,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>320</width>
-              <height>240</height>
+              <width>1920</width>
+              <height>1080</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3503,6 +3284,223 @@
         <gravity>0</gravity>
       </link>
       <pose>-233.316 -11.988 280 0 1.5707 0</pose>
+    </model>
+    <model name='map05'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://map05/meshes/map05.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://map05/meshes/map05.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://map05/meshes/map05.dae</uri>
+              <uri>model://map05/materials/textures</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-2.14505 -1.98429 0 0 -0 0</pose>
+    </model>
+    <model name='point_B'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://point/meshes/point.dae</uri>
+              <scale>1 1.2 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://point/meshes/point.dae</uri>
+              <scale>1 1.2 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://point/meshes/point.dae</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-342.238 -103.867 0 0 -0 0</pose>
+    </model>
+    <model name='point_A'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://point/meshes/point.dae</uri>
+              <scale>1.5 1.3 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://point/meshes/point.dae</uri>
+              <scale>1.5 1.3 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://point/meshes/point.dae</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-245.639 158.633 0 0 -0 0</pose>
+    </model>
+    <model name='point_D'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://point/meshes/point.dae</uri>
+              <scale>0.8 0.8 1</scale>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://point/meshes/point.dae</uri>
+              <scale>0.8 0.8 1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://point/meshes/point.dae</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>809.696 -319.636 0 0 -0 0</pose>
+    </model>
+    <model name='point_E'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <uri>model://point/meshes/point.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://point/meshes/point.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://point/meshes/point.dae</uri>
+              <name>__default__</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-619.675 -79.8266 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>
