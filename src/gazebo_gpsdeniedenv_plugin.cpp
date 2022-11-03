@@ -50,7 +50,7 @@ void GpsDeniedEnv::OnUpdate()
 
             randWalkPose += ignition::math::Vector3d(rand_x, rand_y, rand_z);
             // printf("%f : %f, %f, %f\n", t, randWalkPose.X(), randWalkPose.Y(), randWalkPose.Z() );
-            _model->SetLinearVel(randWalkPose);
+//            _model->SetLinearVel(randWalkPose);
 
             _prev_t  = t;
         }
@@ -60,7 +60,7 @@ void GpsDeniedEnv::OnUpdate()
         ignition::math::Vector3d model_pos = _model->WorldPose().Pos();
         pos.set_x(model_pos.X());
         pos.set_y(model_pos.Y());
-        pos.set_z(360);
+        pos.set_z(model_pos.Z());
         _gpsdenied_pos_pub->Publish(pos);
 
         // sensor_msgs::msgs::GpsDenied msg;

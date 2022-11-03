@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <sdf version="1.4">
     <model name="gpsdenied_env">
-      <pose>299.498 -378.2286 360  0 0 0</pose>
+      <pose>0 0 10 0 0 0</pose>
       <link name="body">
        <gravity>0</gravity>
        <visual name="visual">
           <geometry>
             <sphere>
-              <radius>2.0</radius>
+              <radius>50.0</radius>
             </sphere>
           </geometry>
           <material>

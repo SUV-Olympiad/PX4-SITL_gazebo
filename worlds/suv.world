@@ -1,6 +1,10 @@
 <?xml version="1.0" ?>
 <sdf version='1.7'>
   <world name='default'>
+    <include>
+      <uri>model://gpsdenied_env</uri>
+      <pose>-427.080 39.898 300 0 0 0</pose>
+    </include>
     <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
       <pose>0 0 10 0 -0 0</pose>
@@ -3044,8 +3048,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>1920</width>
-              <height>1080</height>
+              <width>320</width>
+              <height>240</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3096,8 +3100,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>1920</width>
-              <height>1080</height>
+              <width>320</width>
+              <height>240</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3148,8 +3152,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>1920</width>
-              <height>1080</height>
+              <width>320</width>
+              <height>240</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3200,8 +3204,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>1920</width>
-              <height>1080</height>
+              <width>320</width>
+              <height>240</height>
             </image>
             <clip>
               <near>0.1</near>
@@ -3252,8 +3256,8 @@
           <camera>
             <horizontal_fov>1.047</horizontal_fov>
             <image>
-              <width>1920</width>
-              <height>1080</height>
+              <width>320</width>
+              <height>240</height>
             </image>
             <clip>
               <near>0.1</near>

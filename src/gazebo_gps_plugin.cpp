@@ -253,7 +253,7 @@ void GpsPlugin::OnWorldUpdate(const common::UpdateInfo& /*_info*/)
   ignition::math::Quaterniond& att_W_I = T_W_I.Rot();
 
   double gps_denied_dist = pos_W_I.Distance(gps_denied_pos_);
-  if ( gps_denied_dist > 0.0 && gps_denied_dist < 2.0 && !gps_denied_pos_.Equal(ignition::math::Vector3d(0,0,0))) {
+  if ( gps_denied_dist > 0.0 && gps_denied_dist < 50.0 && !gps_denied_pos_.Equal(ignition::math::Vector3d(0,0,0))) {
     //printf("dist: %f\n", gps_denied_dist);
     gps_denied_noise_density_ = 100.0;
   }
